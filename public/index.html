@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>My Monad Faucet</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Corrected from rel="styles" to rel="stylesheet" -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Monad Faucet</h1>
+      <p>
+        Enter your wallet address to claim 0.01 $MON (refreshes every 12 hours)
+      </p>
+      <input type="text" id="walletAddress" placeholder="Your wallet address" />
+      <button class="claim-button" onclick="claimTokens()">
+        Claim 0.01 $MON
+      </button>
+      <p id="message"></p>
+    </div>
+    <footer>
+      Shout out to <a href="https://x.com/AirdropScript6">@zero2hero100x</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

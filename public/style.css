@@ -1,0 +1,144 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #141321;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Subtle background pattern */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(164, 42, 255, 0.1),
+    transparent 70%
+  );
+  z-index: -1;
+}
+
+body .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 40px;
+  border-radius: 12px;
+  background: rgba(20, 19, 33, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  width: 90%;
+}
+
+body .container h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #a42aff;
+  font-weight: bold;
+}
+
+body .container p {
+  font-size: 18px;
+  margin: 0 0 25px;
+  color: #c47eff;
+}
+
+body .container input {
+  padding: 12px;
+  width: 100%;
+  max-width: 450px;
+  margin: 20px 0;
+  border: 1px solid #252441;
+  border-radius: 8px;
+  background: #252441;
+  color: #ffffff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body .container input::placeholder {
+  color: #c47eff;
+}
+
+body .container input[type="text"]:focus {
+  outline: none;
+  border-color: #a42aff;
+  box-shadow: 0 0 10px rgba(164, 42, 255, 0.3);
+}
+
+body .container .claim-button {
+  padding: 12px 40px;
+  background: #a42aff;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+body .container .claim-button:hover {
+  background: #c47eff;
+  transform: scale(1.05);
+}
+
+body .container #message {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+body .container #message:empty {
+  display: none;
+}
+
+body .container #message.success {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+  border-color: #a42aff;
+}
+
+body .container #message.error {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff4444;
+  border-color: #ff4444;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+footer a {
+  color: #a42aff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #c47eff;
+  text-decoration: underline;
+}
